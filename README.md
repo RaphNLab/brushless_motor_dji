@@ -1,9 +1,8 @@
 # Introduction 
-This template expose simple code for STM32L1 microcontroller.
+This template expose simple code for STM32F7 microcontroller.
 
 * Used Library:
     * Libopencm3
-    * FreeRTOS
 * Build system:
     * CMake
 
@@ -42,10 +41,10 @@ This template expose simple code for STM32L1 microcontroller.
 # Build and Test
     1. Open a new terminal
     2. Enter: ``` cmake -DCMAKE_TOOLCHAIN_FILE=cmake/arm-gcc-toolchain.cmake -B build -B build ``` to create build directory with respective toolchain
-    2. Configure FreeRTOS
     2.	Run clean & build task to compile
     3.	Press F5 to start debugging session
     4.	rum cmake... to flash the microcontroller
+    5. The resulting executable can be used for spining a brushless motor
 
 # Contribute
 If you desire to contribute to this project, clone the code and feel free to modify 
