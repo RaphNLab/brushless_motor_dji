@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "crossARM",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // FreeRTOS core
+                "${workspaceFolder}/freeRTOS/include",
+
+                // FreeRTOS port for Cortex-M3
+                "${workspaceFolder}/freeRTOS/portable/GCC/ARM_CM3",
+
+                // Your config file (where FreeRTOSConfig.h lives)
+                "${workspaceFolder}/freeRTOS/config",
+                "${workspaceFolder}/libopencm3/lib/cm3",
+                "${workspaceFolder}/libopencm3/lib",
+                "${workspaceFolder}/libopencm3"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c89",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}

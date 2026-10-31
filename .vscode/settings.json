@@ -1,0 +1,16 @@
+{
+    "cortex-debug.gdbPath": "/usr/bin/gdb-multiarch",
+    "memory-view.trackDebuggers": [
+        "all"
+    ],
+    "files.associations": {
+        "re46c109_drv.h": "c",
+        "freertos.h": "c",
+        "portable.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": true,
+    "lldb.displayFormat": "auto",
+    "lldb.showDisassembly": "always",
+    "lldb.dereferencePointers": true,
+    "lldb.consoleMode": "commands"
+}

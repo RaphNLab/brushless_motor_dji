@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32 with (OpenOCD)",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/arm_cortex_m4_test.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F767ZI",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "board/stm32f7discovery.cfg"
+            ],
+            "svdFile": "${workspaceRoot}/STM32F767.svd",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "both",
+            "preLaunchTask": "clean & build",
+            "liveWatch": true,
+            "preLaunchCommands": [
+                "set substitute-path ../common ${workspaceFolder}/libopencm3/lib/stm32/common",
+                "set substitute-path ../../cm3 ${workspaceFolder}/libopencm3/lib/cm3",
+                "set substitute-path ../../ ${workspaceFolder}/libopencm3/lib"
+            ],
+            "postLaunchCommands": [
+                "monitor reset halt"
+            ]
+        }
+    ],
+    "cortex-debug.memoryWindow": [
+        {
+            "address": "0x20014000",
+            "length": 128,
+            "name": "SRAM"
+        },
+        {
+            "address": "0x08000000",
+            "length": 256,
+            "name": "Flash"
+        }
+    ]
+}
